@@ -17,7 +17,7 @@
             <div class="card-header bg-dark">
                 <h3 class="text-white">Lista de Usuarios</h3>
             </div>
-
+            
             <div class="card-body">
                 <div class="table-responsive">
                     @if(Model.Count()>0)
@@ -36,11 +36,11 @@
                             <tbody>
                                 @foreach(var item in Model) {
                                     <tr>
-                                        <td>@Html.DisplayNameFor(m => item.Id)</td>
-                                        <td>@Html.DisplayNameFor(m => item.Nombre)</td>
-                                        <td>@Html.DisplayNameFor(m => item.Telefono)</td>
-                                        <td>@Html.DisplayNameFor(m => item.Celular)</td>
-                                        <td>@Html.DisplayNameFor(m => item.Email)</td> 
+                                        <td>@Html.DisplayFor(m => item.Id)</td>
+                                        <td>@Html.DisplayFor(m => item.Nombre)</td>
+                                        <td>@Html.DisplayFor(m => item.Telefono)</td>
+                                        <td>@Html.DisplayFor(m => item.Celular)</td>
+                                        <td>@Html.DisplayFor(m => item.Email)</td> 
                                         <td>
                                             <a class="btn btn-warning" asp-action="Editar" asp-route-id="@item.Id"><i class="bi bi-pencil-plus-fill"></i>Editar</a>
                                             <a class="btn btn-secondary" asp-action="Detalle" asp-route-id="@item.Id"><i class="bi bi-info-plus-fill"></i>Detalle</a>
